@@ -21,7 +21,8 @@ security:
                 check_path: app_security_login
 
             logout:
-                path: "app_logout"
+                path: app_security_logout
+                target: app_security_session
 
             login_throttling:
                 max_attempts: 3

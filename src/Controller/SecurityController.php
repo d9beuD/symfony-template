@@ -65,4 +65,10 @@ class SecurityController extends AbstractController
     public function logout()
     {
     }
+
+    #[Route('/session', name: 'app_security_session', methods: ['GET'])]
+    public function session(#[CurrentUser] ?User $user): Response
+    {
+        return $this->json($user);
+    }
 }
