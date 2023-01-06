@@ -60,4 +60,9 @@ class SecurityController extends AbstractController
 
         return $this->json($user);
     }
+
+    #[Route('/logout', name: 'app_security_logout', methods: ['GET'])]
+    public function logout()
+    {
+    }
 }
